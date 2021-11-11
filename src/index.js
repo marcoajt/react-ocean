@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
+function Login() {
+  return (
+    <div>
+      <p>Username:</p>
+      <p>Password:</p>
+    </div>
+  );
+}
+
+function Hearder(props) {
+  return (
+    <div style={{ fontSize: "35px" }}> {/*PROPS(argumento) vai receber a variavel */}
+      <p>DJ - {props.titulo}</p>
+    </div>
+  );
+}
+
+ReactDOM.render (
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Hearder titulo = "Inicial" fontSize='35' />
+    <Login/>
+  </React.StrictMode>
+
+  ,
+
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
